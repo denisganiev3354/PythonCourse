@@ -85,9 +85,9 @@
 #     print(line)
 #####################################
 
-text = 'Съешь ещё этих Мягких Францусских булок'
-print(len(text))
-print('еще' in text)
-print(text.lower())
-print(text.upper())
-print(text.replace('ещё','ЕЩЁ'))
+# text = 'Съешь ещё этих Мягких Францусских булок'
+# print(len(text))
+# print('еще' in text)
+# print(text.lower())
+# print(text.upper())
+# print(text.replace('ещё','ЕЩЁ'))
