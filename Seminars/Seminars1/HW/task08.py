@@ -16,4 +16,3 @@ elif (c % a == 0 or c % b == 0):
     print('Yes')
 else:
     print('No')
-
