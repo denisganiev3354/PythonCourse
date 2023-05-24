@@ -15,9 +15,9 @@ if(S % 6):
     print("Invalid result")
 
 else: 
-    petya = S / 6
+    petya = S // 6
     sergey = petya
-    katya = (S / 6) * 2
+    katya = S // 6 * 2
     print('petya =' , int(petya), 'sergey =', int(sergey), 'katya =', int(katya))
    
 

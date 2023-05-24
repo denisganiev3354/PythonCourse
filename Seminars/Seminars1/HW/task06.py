@@ -10,21 +10,41 @@
 # 385916 -> yes
 # 123456 -> no
 
-a = int(input())
-if (99999 < a < 1000000):
-    b = a // 1000
-    b1 = b // 100
-    b2 = b // 10 % 10
-    b3 = b % 10
-    b4 = b1 + b2 + b3
-    c = int(a % 1000)
-    c1 = c // 100
-    c2 = c // 10 % 10
-    c3 = c % 10
-    c4 = c1 + c2 + c3
-    if b4 == c4:
-        print('yes')
-    else:
-        print('no')
+# мой вариант   
+
+# a = int(input())
+# if (99999 < a < 1000000):
+#     b = a // 1000
+#     b1 = b // 100
+#     b2 = b // 10 % 10
+#     b3 = b % 10
+#     b4 = b1 + b2 + b3
+#     c = int(a % 1000)
+#     c1 = c // 100
+#     c2 = c // 10 % 10
+#     c3 = c % 10
+#     c4 = c1 + c2 + c3
+#     if b4 == c4:
+#         print('yes')
+#     else:
+#         print('no')
+# else:
+#     print("Invalid result")
+
+# вариант преподавателя с моими корректировками
+
+ticket_number = int(input())
+if 100000 < ticket_number < 999999:
+    sum_first = 0
+    sum_last = 0
+
+    while ticket_number:
+        digit = ticket_number % 10
+        if ticket_number > 999:
+            sum_last += digit
+        else:
+            sum_first += digit
+        ticket_number //= 10
+    print(f"The ticket is lucky: {sum_first == sum_last}")
 else:
-    print("Invalid result")
+    print("No such ticket exists") 

@@ -8,9 +8,8 @@
 
 a = int(input())
 summa = 0
-while a > 0:
-    b = a % 10
-    summa += b
+while a:
+    summa += a % 10
     a //= 10
 print(summa)
 
