@@ -4,11 +4,13 @@
 # Помогите Кате отгадать задуманные Петей числа.
 
 
+s = int(input())
+p = int(input())
+num_1 = 1
 
-
-a, b = map(int, input().split())
-res = []
-for i in range(a + b):
-    if i == (a * i - b)**0.5:
-        res.append(i)
-print(*res if len(res) == 2 else res + res)
+while num_1 < p:
+    num_2 = s - num_1
+    if s == num_1 + num_2 and p == num_2 * num_1:
+        print(num_1, num_2)
+        break
+    num_1 += 1
