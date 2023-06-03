@@ -32,7 +32,6 @@ print(result)
 # print(list_nums.count(int(input())))
 
 # вариант 2
-
 # from random import choices
 #
 # num = int(input())
