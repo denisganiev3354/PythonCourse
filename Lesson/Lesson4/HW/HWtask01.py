@@ -7,7 +7,7 @@ from random import randint
 
 # n = int(input())
 # list_num1 = []
-#
+
 # for i in range(n):
 #     list_num1.append(randint(1, 10))
 # print(list_num1)
