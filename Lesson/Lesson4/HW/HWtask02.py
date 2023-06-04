@@ -11,7 +11,7 @@
 
 import random
 bushes = int(input())
-blueberry = list(random.randint(0, 10) for i in range(bushes))
+blueberry = list(int(input()) for i in range(bushes))
 result = []
 i = 0
 sum = 0
@@ -28,3 +28,18 @@ while (i < bushes):
     i += 1
 
 print(result[-1])
+# print('cool')
+# bushes = int(input())
+# blueberry = list(int(input()) for i in range(bushes))
+# result = []
+# i = 0
+#
+# print(blueberry)
+#
+# while (i < len(blueberry) - 1):
+#     if (i != bushes - 1):
+#         result.append(blueberry[i] + blueberry[i - 1] + blueberry[i + 1])
+#         i += 1
+#     else:
+#         result.append(blueberry[i] + blueberry[i - 1] + blueberry[0])
+# print(max(blueberry))
