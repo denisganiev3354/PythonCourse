@@ -20,9 +20,9 @@ print(blueberry)
 
 while (i < bushes):
     if (i == bushes - 1):
-        sum = blueberry[i] + blueberry[i - 1] + blueberry[0]
+        sum = blueberry[0] + blueberry[i] + blueberry[i - 1]
     else:
-        sum = blueberry[i] + blueberry[i - 1] + blueberry[i + 1]
+        sum = blueberry[i - 1] + blueberry[i] + blueberry[i + 1]
         result.append(sum)
         result.sort()
     i += 1
