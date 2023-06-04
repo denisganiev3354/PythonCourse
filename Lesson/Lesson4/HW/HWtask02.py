@@ -9,3 +9,22 @@
 # находясь перед некоторым кустом заданной во входном файле грядки.
 
 
+import random
+bushes = int(input())
+blueberry = list(random.randint(0, 10) for i in range(bushes))
+result = []
+i = 0
+sum = 0
+
+print(blueberry)
+
+while (i < bushes):
+    if (i == bushes - 1):
+        sum = blueberry[i] + blueberry[i - 1] + blueberry[0]
+    else:
+        sum = blueberry[i] + blueberry[i - 1] + blueberry[i + 1]
+        result.append(sum)
+        result.sort()
+    i += 1
+
+print(result[-1])
