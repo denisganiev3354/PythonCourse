@@ -10,3 +10,8 @@
 # Массив состоит из целых чисел.
 
 
+# lst = list(map(int, input().split()))
+# print(sum(0 < i < len(lst) - 1 and lst[i - 1] < lst[i] and lst[i + 1] < lst[i] for i in range(len(lst))))
+
+nums = [int(i) for i in input().split()]
+print(len([i for i in range(1, len(nums) - 1) if nums[i - 1] < nums[i] > nums[i + 1]]))
