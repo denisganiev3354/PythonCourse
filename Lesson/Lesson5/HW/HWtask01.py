@@ -15,8 +15,6 @@ def ExponentiationRec(num1, num2):
     elif num2 != 1:
         return (num1 * ExponentiationRec(num1, num2 - 1))
 
-a = int(input())
-b = int(input())
 
-print(ExponentiationRec(a, b))
+print(ExponentiationRec(int(input()), int(input())))
 
