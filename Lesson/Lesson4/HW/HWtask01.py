@@ -12,7 +12,7 @@ from random import randint
 #     list_num1.append(randint(1, 10))
 # print(list_num1)
 
-# print(list_num1[int(input())], list_num1.append(randint(1, 10)))
+
 
 # m = int(input())
 # list_num2 = []
@@ -20,8 +20,7 @@ from random import randint
 # for i in range(m):
 #     list_num2.append(randint(1, 10))
 # print(list_num2)
-#
-# # print(list_num1[int(input())], list_num1.append(randint(1, 10)))
+
 
 print(list_1 := [randint(1, 10) for i in range((int(input())))])
 print(list_2 := [randint(1, 10) for i in range((int(input())))])
