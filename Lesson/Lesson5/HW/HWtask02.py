@@ -9,11 +9,10 @@
 #     4
 
 def SumNum(num1, num2):
-    if num1 > -1 and num2 > -1:
-        return num1 + num2
+    if num1 < 0 < num2:
+        num1, num2 = num2, num1
+    if num2 == 0:
+        return num1
+    return SumNum(num1 + 1, num2 - 1)
 
-
-
-a = int(input())
-b = int(input())
-print(SumNum(a, b))
+print(SumNum(int(input()), int(input())))
