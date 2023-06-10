@@ -15,15 +15,15 @@
 #     **Вывод:** Парам пам-пам
 
 
-s = input().split() # считываем стихи и разделяем по словам
-syllables = [] # список для количества слогов в каждой фразе
+s = input().split()
+syllables = []
 for phrase in s:
-    count = 0 # счетчик гласных в фразе
+    count = 0
 for letter in phrase:
-    if letter in "аеёиоуыэюя": # если буква гласная
+    if letter in "аеёиоуыэюя":
         count += 1
-    syllables.append(count) # добавляем количество слогов в список
-if len(set(syllables)) == 1: # если все элементы списка одинаковые
+    syllables.append(count)
+if len(set(syllables)) == 1:
     print("Парам пам-пам")
 else:
     print("Пам парам")
