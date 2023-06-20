@@ -1,22 +1,5 @@
-# Задача №49. Решение в группах
-# Создать телефонный справочник с
-# возможностью импорта и экспорта данных в
-# формате .txt. Фамилия, имя, отчество, номер
-# телефона - данные, которые должны находиться
-# в файле.
-# 1. Программа должна выводить данные
-# 2. Программа должна сохранять данные в
-# текстовом файле
-# 3. Пользователь может ввести одну из
-# характеристик для поиска определенной
-# записи(Например имя или фамилию
-# человека)
-# 4. Использование функций. Ваша программа
-# не должна быть линейной
-
 from os import path
-from re import match
-from unittest import case
+
 
 all_data = []
 last_id = 0
@@ -25,15 +8,6 @@ file_base = "base.txt"
 if not path.exists(file_base):
     with open(file_base, 'w', encoding='utf-8') as f:
         pass
-
-
-def exit():
-    print('yes or no?')
-    ex = input()
-    if ex == 'yes':
-        print('exit')
-        quit()
-    return
 
 def read_records():
     global all_data, last_id
@@ -50,7 +24,7 @@ def read_records():
 
 
 def show_all():
-    if all_data:
+    if not all_data:
         print('Empty data')
     else:
         print(*all_data, sep='\n')
@@ -59,7 +33,7 @@ def add_new_contact():
 
     global last_id
 
-    array = ['Surname', 'Name', 'Patronymic', 'Phone number']
+    array = ['surname', 'name', 'patronymic', 'phone number']
     answers = []
 
     for i in array:
@@ -140,11 +114,11 @@ def data_collection(num):
         if num == "phone number":
             if answer.isdigit() and len(answer) == 11:
                 break
-    answer = input(f"Data is incorrect!\n"
-                       f"Use only use only the letters"
-                       f" of the alphabet, the length"
-                       f" of the number is 11 digits\n"
-                       f"Enter a {num}: ")
+        answer = input(f"Data is incorrect!\n"
+                           f"Use only use only the letters"
+                           f" of the alphabet, the length"
+                           f" of the number is 11 digits\n"
+                           f"Enter a {num}: ")
     return answer
 
 
@@ -231,9 +205,9 @@ def exp_imp_menu():
                      "2. Export\n"
                      "3. exit\n")
 
-        match move :
+        match move:
             case "1":
-                imp_bd()(input("Enter the name of the file: "))
+                imp_bd(input("Enter the name of the file: "))
             case "2":
                 exp_bd(input("Enter the name of the file: "))
             case "3":
